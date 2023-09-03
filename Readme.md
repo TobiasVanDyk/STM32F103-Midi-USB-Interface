@@ -55,7 +55,7 @@ Also in the Tool menu select:<br>
 <img src="images/image6.jpg" height="240" /> 
 </p>
 
-8. Connect the STM32F103 to the STLink adapter (4 wires), and connect only the STLink to the computer USB. Check that both boot0 and boot1 selections are on 0. 
+8. Connect the STM32F103 to the STLink adapter (4 wires), and connect only the STLink to the computer USB. Check that both boot0 and boot1 jumper selections are on 0. 
 
 9. Click Compile on the Arduino IDE and then Upload. The application is now on the Blue Pill but it still needs a special HID bootloader installed.
 
@@ -77,13 +77,13 @@ Click Compile on the Arduino IDE and then Upload. This should then upload the HI
 
 Also download the bootloader bin tkg_hid_generic_pc13.bin from [**this releases page**](https://github.com/TheKikGen/USBMidiKliK4x4/releases/tag/v2.5.1). 
 
-Connect your sTM32F103 to a USB-Serial converter using only the V+ (5v or 3v3 but do connect it then to the right corresponding pins on the Blue Pill as well), Ground and TX-RX and Rx-Tx wires. Check that boot0 and boot1 selections are on 1 and 0 respectively. Then run the Flash loader and select the ComXX port for the USBSerial converter and then follow the setup as below - but select the tkg_hid_generic_pc13.bin file.
+Connect your sTM32F103 to a USB-Serial converter using only the V+ (5v or 3v3 but do connect it then to the right corresponding pins on the Blue Pill as well), Ground and TX-RX and Rx-Tx wires. Check that boot0 and boot1 jumper selections are on 1 and 0 respectively. Then run the Flash loader and select the ComXX port for the USBSerial converter and then follow the setup as below - but select the tkg_hid_generic_pc13.bin file.
 
 <p align="left">
 <img src="images/image9.jpg" height="240" /> 
 </p>
 
-Check that both boot0 and boot1 selections are on 0. Plug your Blue Pill it into the PC USB Port and check that a new sound device named Midiklik 4x is present. You may want to install [**MidiOx**](http://www.midiox.com/) to check that all four input and four output Midi ports are available.
+Check that both boot0 and boot1 jumpers are on 0. Plug your Blue Pill it into the PC USB Port and check that a new sound device named Midiklik 4x is present. You may want to install [**MidiOx**](http://www.midiox.com/) to check that all four input and four output Midi ports are available.
 
 <p align="left">
 <img src="images/image10.png" height="240" /> 
