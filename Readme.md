@@ -82,6 +82,7 @@ Also download the bootloader bin tkg_hid_generic_pc13.bin from [**this releases 
 Connect your sTM32F103 to a USB-Serial converter using only the V+ (5v or 3v3 but do connect it then to the right corresponding pins on the Blue Pill as well), Ground and TX-RX and Rx-Tx wires. Check that boot0 and boot1 jumper selections are on 1 and 0 respectively. Then run the Flash loader and select the ComXX port for the USBSerial converter and then follow the setup as below - but select the tkg_hid_generic_pc13.bin file.
 
 <p align="left">
+<img src="STM32F103-UARTPgm.png" height="240" />  
 <img src="images/image9.jpg" height="240" /> 
 </p>
 
