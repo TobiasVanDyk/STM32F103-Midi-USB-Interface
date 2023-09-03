@@ -1,6 +1,8 @@
 ## STM32F103 Midi USB Interface based on Midiklik
 
-This is a detailed description of how to compile and program an STM32F103C8T6 MidiUSBConverter with the code from [**TheKikGen USBMidiKliK4x4**](https://github.com/TheKikGen/USBMidiKliK4x4) as the instructions there are aimed at current users of the device, rather than a new user. *Midiklik 4x is an unusual MidiUSB interface because of the extensive number of options changeable via sysex commands.*
+This is a detailed description of how to compile and program an STM32F103C8T6 MidiUSBConverter with the code from [**TheKikGen USBMidiKliK4x4**](https://github.com/TheKikGen/USBMidiKliK4x4) as the instructions there are aimed at current users of the device, rather than a new user. 
+
+**Midiklik 4x is an unusual MidiUSB interface because of the extensive number of options changeable via sysex commands.** In the future it will replace an analog 4x4 Midi Crosspoint switch which was built in the early 1990's - probably with the addition of a touch LCD control surface.
 
 <p align="left">
 <img src="images/midi4x4a.png" height="240" /> 
