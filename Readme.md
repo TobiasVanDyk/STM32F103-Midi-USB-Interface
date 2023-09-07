@@ -8,7 +8,7 @@ This is a detailed description of how to compile and program an STM32F103C8T6 Mi
 <img src="images/midi4x4a.png" height="240" /> 
 </p>
 
-1. Install [**Arduino 1.8.19**](https://www.arduino.cc/en/software).
+1. Install [**Arduino 1.8.19**](https://www.arduino.cc/en/software). To upload through STLink SWD, Serial or DFU, [**STM32CubeProgrammer**](https://www.st.com/en/development-tools/stm32cubeprog.html) also has to be installed.
 
 2. Download the [**MidiUSB4x4 repository**](https://github.com/TheKikGen/USBMidiKliK4x4) as a zip file and unzip it underneath your My Documents/Arduino/ folder. Rename the folder as UsbMidiKliK4x4 and you can then delete the bin and doc folders, and the .gitignore and README.md files. Replace three of the original files with the ones I have edited (usb_midi_device.h, hardware_config.h, UsbMidiKliK4x4.ino) - or do your own editing on the original files. 
 
