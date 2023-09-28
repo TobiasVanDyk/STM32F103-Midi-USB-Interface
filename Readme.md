@@ -14,10 +14,10 @@ This is a detailed description of how to compile and program an STM32F103C8T6 Mi
  
 03 Open the STM32CubeProgrammer and click connect.
  
-04 Download the bootloader bin tkg_hid_generic_pc13.bin from [**this releases page**](https://github.com/TheKikGen/USBMidiKliK4x4/releases/tag/v2.5.1). <br>
-Then click green down-arrow and Open file then select hid bootloader file: tkg_hid_generic_pc13.bin
+04 Download the bootloader file named tkg_hid_generic_pc13.bin from [**this releases page**](https://github.com/TheKikGen/USBMidiKliK4x4/releases/tag/v2.5.1). <br>
+Then click the CubeProgrammer green down-arrow on the left and then click Open file and select the hid bootloader file: tkg_hid_generic_pc13.bin
  
-05 Click Start Programming and then clock ok twice. Then click Disconnect and close the STM32CubeProgrammer.
+05 Click Start Programming and then click OK twice. Then click Disconnect and then close the STM32CubeProgrammer.
 
 06 Disconnect the J-Link from the USB port and then disconnect it from the STM32F103 board.
 
