@@ -20,6 +20,11 @@ Then click the CubeProgrammer green down-arrow on the left and then click Open f
  
 05 Click Start Programming and then click OK twice. Then click Disconnect and then close the STM32CubeProgrammer.
 
+<p align="left">
+<img src="images/3x3-4.png" height="240" /> 
+<img src="images/3x3-5.png" height="240" />  
+</p>
+
 06 Disconnect the J-Link from the USB port and then disconnect it from the STM32F103 board.
 
 07 Plug the STM32F103 board into a USB port.
@@ -50,6 +55,11 @@ Also in the Tool menu select:<br>
 * "HID bootloader" as upload method 
 
 14 Press Compile then press the reset button on the board twice and then press upload. 
+
+<p align="left">
+<img src="images/3x3-9.png" height="240" /> 
+<img src="images/3x3-10.png" height="240" />  
+</p>
 
 15 Close the Arduino IDE and press the reset button on the board once.
  
