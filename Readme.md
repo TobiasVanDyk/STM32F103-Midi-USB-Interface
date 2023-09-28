@@ -11,7 +11,7 @@ This is a detailed description of how to compile and program an STM32F103C8T6 Mi
 
 01 Install the STM32CubeProgrammer from [**here**](https://www.st.com/en/development-tools/stm32cubeprog.html)  - you will have to supply an email to do so. You may want to inspect your sound devices and com ports present before the next steps. If necessary install [**MidiOX**](http://www.midiox.com/) for more detailed information about your sound midi and synth devices.
  
-02 Connect the STM32F103 board to the J-Link and plug the J-Link into a USB port.
+02 Connect the STM32F103 board to an ST-Link programmer and plug the ST-Link into a USB port.
  
 03 Open the STM32CubeProgrammer and click connect.
  
@@ -25,7 +25,7 @@ Then click the CubeProgrammer green down-arrow on the left and then click Open f
 <img src="images/3x3-5.png" height="210" />  
 </p>
 
-06 Disconnect the J-Link from the USB port and then disconnect it from the STM32F103 board.
+06 Disconnect the ST-Link from the USB port and then disconnect it from the STM32F103 board.
 
 07 Plug the STM32F103 board into a USB port.
 
