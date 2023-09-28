@@ -57,8 +57,8 @@ Also in the Tool menu select:<br>
 14 Press Compile then press the reset button on the board twice and then press upload. 
 
 <p align="left">
-<img src="images/3x3-9.png" height="240" /> 
-<img src="images/3x3-10.jpeg" height="240" />  
+<img src="images/3x3-10.jpeg" height="240" /> 
+<img src="images/3x3-9.png" height="240" />  
 </p>
 
 15 Close the Arduino IDE and press the reset button on the board once.
