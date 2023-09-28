@@ -59,7 +59,10 @@ Also in the Tool menu select:<br>
 <img src="images/image10.png" height="240" /> 
 </p>
 
-### Protype
+### Prototype
+
+6N137 Midi Input and direct Midi Output
+
 <p align="left">
 <img src="images/3x3c.png" height="240" /> 
 <img src="images/3x3d.png" height="240" />  
