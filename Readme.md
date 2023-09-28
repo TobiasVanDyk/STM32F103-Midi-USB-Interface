@@ -5,7 +5,8 @@ This is a detailed description of how to compile and program an STM32F103C8T6 Mi
 **Midiklik 4x is an unusual MidiUSB interface because of the extensive number of options changeable via sysex commands.** In the future it will replace an analog 4x4 Midi Crosspoint switch which was built in the early 1990's - probably with the addition of a touch LCD control surface.
 
 <p align="left">
-<img src="images/midi4x4a.png" height="240" /> 
+<img src="images/3x3a.png" height="240" /> 
+<img src="images/3x3b.png" height="240" />  
 </p>
 
 01 Install the STM32CubeProgrammer from [**here**](https://www.st.com/en/development-tools/stm32cubeprog.html)  - you will have to supply an email to do so. You may want to inspect your sound devices and com ports present before the next steps. If necessary install [**MidiOX**](http://www.midiox.com/) for more detailed information about your sound midi and synth devices.
