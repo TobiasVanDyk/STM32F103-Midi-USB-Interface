@@ -58,5 +58,10 @@ Also in the Tool menu select:<br>
 <p align="left">
 <img src="images/image10.png" height="240" /> 
 </p>
- 
+
+### Protype
+<p align="left">
+<img src="images/3x3c.png" height="240" /> 
+<img src="images/3x3d.png" height="240" />  
+</p>
 
