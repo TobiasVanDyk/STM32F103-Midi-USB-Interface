@@ -1,5 +1,7 @@
 ## STM32F103 Midi USB Interface based on Midiklik
-This is a replacement for a 4x4 Xpoint Midi diode-based switch using a software Midi switch based on [**MidiKlik4x4**](https://github.com/TheKikGen/USBMidiKliK4x4/tree/master). It has 4 screens - two with a 5x5 matrix touch switch for normal Midi routing and IThru routing, and two screens with 12 buttons for various functions - all of which are still in development. Use the [Nxt] or [>] key to move between the four layouts. Note that the Pico updates its Midi routing data after switch-on, during the first LCD blank timeout - currently set to 20 seconds - i.e. Midi routing data will only be valid after this first LCD timeout. 
+This is a replacement for a 4x4 Xpoint Midi diode-based switch using a software Midi switch based on [**MidiKlik4x4**](https://github.com/TheKikGen/USBMidiKliK4x4/tree/master) - Midiklik is an unusual MidiUSB interface because of the extensive range and number of routing, filter and other configuration options, changeable via its set of internal SysEx commands. 
+
+The Pico Midi Switch has 4 screens - two with a 5x5 matrix touch switch for normal Midi routing and IThru routing, and two screens with 12 buttons for various functions - all of which are still in development. Use the [Nxt] or [>] key to move between the four layouts. Note that the Pico updates its Midi routing data after switch-on, during the first LCD blank timeout - currently set to 20 seconds - i.e. Midi routing data will only be valid after this first LCD timeout. 
 
 It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. The only change is the addition of a SysEx F0 77 77 78 E0 04 00 00 F7 to mod_intsysex.h to send routing data to the Pico - the modified file is here as mod_intsysex.zip
 
@@ -10,11 +12,18 @@ It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F1
 <img src="images/p4.jpg" height="140" /> 
 </p>
 
-**Midiklik 4x4 is an unusual MidiUSB interface because of the extensive number of options changeable via sysex commands.** 
 
 <p align="left">
 <img src="images/3x3a.png" height="200" /> 
 <img src="images/3x3b.png" height="200" />  
+</p>
+
+The LCD is an Electrodragon LCD ILI9341 320x240 2.4inch with XPT2046 touch control. An external transistor was added to control the display brightness as shown below.
+
+<p align="left">
+<img src="images/lcd2.jpg" height="140" /> 
+<img src="images/lcd1.jpg" height="140" /> 
+<img src="images/TFT-ILI9341.jpg" height="140" /> 
 </p>
 
 This is a detailed description of how to compile and program an STM32F103C8T6 MidiUSBConverter with the code from [**TheKikGen USBMidiKliK4x4**](https://github.com/TheKikGen/USBMidiKliK4x4) without having to touch the Boot jumpers on the STM32F103 board.
