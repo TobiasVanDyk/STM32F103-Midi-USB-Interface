@@ -1,5 +1,5 @@
 ## STM32F103 Midi USB Interface based on Midiklik
-This is a replacement for a 4x4 Xpoint Midi diode-based switch using a software Midi switch based on [**MidiKlik4x4**](https://github.com/TheKikGen/USBMidiKliK4x4/tree/master) - Midiklik is an unusual MidiUSB interface because of the extensive range and number of routing, filter and other configuration options, changeable via its set of internal SysEx commands. 
+This is a replacement for a 4x4 Xpoint Midi diode-based switch using a software Midi switch based on [**MidiKlik4x4**](https://github.com/TheKikGen/USBMidiKliK4x4/tree/master) - Midiklik is an unusual MidiUSB interface because of the extensive range and number of routing, [filters and pipes](https://github.com/TheKikGen/USBMidiKliK4x4/blob/master/UMK-4X4-SYSEX-IPL.TXT) and other configuration options, changeable via its set of internal SysEx commands. 
 
 The Pico Midi Switch has 4 screens - two with a 5x5 matrix touch switch for normal Midi routing and IThru routing, and two screens with 12 buttons for various functions - all of which are still in development. Use the [Nxt] or [>] key to move between the four layouts. Note that the Pico updates its Midi routing data after switch-on, during the first LCD blank timeout - currently set to 20 seconds - i.e. Midi routing data will only be valid after this first LCD timeout. 
 
