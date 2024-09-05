@@ -4,17 +4,17 @@ This is a replacement for a 4x4 Xpoint Midi diode-based switch using a software 
 It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. The only change is the addition of a SysEx F0 77 77 78 E0 04 00 00 F7 to mod_intsysex.h to send routing data to the Pico - the modified file is here as mod_intsysex.zip
 
 <p align="left">
-<img src="images/p1.jpg" height="160" /> 
-<img src="images/p2.jpg" height="160" /> 
-<img src="images/p3.jpg" height="160" /> 
-<img src="images/p4.jpg" height="160" /> 
+<img src="images/p1.jpg" height="140" /> 
+<img src="images/p2.jpg" height="140" /> 
+<img src="images/p3.jpg" height="140" /> 
+<img src="images/p4.jpg" height="140" /> 
 </p>
 
 **Midiklik 4x4 is an unusual MidiUSB interface because of the extensive number of options changeable via sysex commands.** 
 
 <p align="left">
-<img src="images/3x3a.png" height="240" /> 
-<img src="images/3x3b.png" height="240" />  
+<img src="images/3x3a.png" height="200" /> 
+<img src="images/3x3b.png" height="200" />  
 </p>
 
 This is a detailed description of how to compile and program an STM32F103C8T6 MidiUSBConverter with the code from [**TheKikGen USBMidiKliK4x4**](https://github.com/TheKikGen/USBMidiKliK4x4) without having to touch the Boot jumpers on the STM32F103 board.
