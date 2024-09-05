@@ -1,13 +1,23 @@
 ## STM32F103 Midi USB Interface based on Midiklik
+This is a replacement for a 4x4 Xpoint Midi diode-based switch using a software Midi switch based on [**MidiKlik4x4**](https://github.com/TheKikGen/USBMidiKliK4x4/tree/master). It has 4 screens - two with a 5x5 matrix touch switch for normal Midi routing and IThru routing, and two screens with 12 buttons for various functions - all of which are still in development,
 
-This is a detailed description of how to compile and program an STM32F103C8T6 MidiUSBConverter with the code from [**TheKikGen USBMidiKliK4x4**](https://github.com/TheKikGen/USBMidiKliK4x4) without having to touch the Boot jumpers on the STM32F103 board.
+It uses a Raspberry Pi Pico RO2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. The only change is the addition of a SysEx F0 77 77 78 E0 04 00 00 F7 to mod_intsysex.h to send routing data to the Pico - the modified file is here as mod_intsysex.zip
 
-**Midiklik 4x is an unusual MidiUSB interface because of the extensive number of options changeable via sysex commands.** In the future it will replace an analog 4x4 Midi Crosspoint switch which was built in the early 1990's - probably with the addition of a touch LCD control surface.
+<p align="left">
+<img src="images/p1.png" height="200" /> 
+<img src="images/p2.png" height="200" /> 
+<img src="images/p3.png" height="200" /> 
+<img src="images/p4.png" height="200" /> 
+</p>
+
+**Midiklik 4x4 is an unusual MidiUSB interface because of the extensive number of options changeable via sysex commands.** 
 
 <p align="left">
 <img src="images/3x3a.png" height="240" /> 
 <img src="images/3x3b.png" height="240" />  
 </p>
+
+This is a detailed description of how to compile and program an STM32F103C8T6 MidiUSBConverter with the code from [**TheKikGen USBMidiKliK4x4**](https://github.com/TheKikGen/USBMidiKliK4x4) without having to touch the Boot jumpers on the STM32F103 board.
 
 01 Install the STM32CubeProgrammer from [**here**](https://www.st.com/en/development-tools/stm32cubeprog.html)  - you will have to supply an email to do so. You may want to inspect your sound devices and com ports present before the next steps. If necessary install [**MidiOX**](http://www.midiox.com/) for more detailed information about your sound midi and synth devices.
  
