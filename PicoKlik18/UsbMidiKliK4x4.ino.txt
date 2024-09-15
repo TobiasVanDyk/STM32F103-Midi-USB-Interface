@@ -1,5 +1,0 @@
-Using library WireSlave at version 1.0 in folder: C:\Users\Tobias\Documents\Arduino\hardware\Arduino_STM32\STM32F1\libraries\WireSlave 
-Using library midiXparser in folder: C:\Users\Tobias\Documents\Arduino\libraries\midiXparser (legacy)
-"C:\\Users\\Tobias\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-size" -A "I:\\Data\\Win10\\Arduino/UsbMidiKliK4x4.ino.elf"
-Sketch uses 44120 bytes (67%) of program storage space. Maximum is 65536 bytes.
-Global variables use 4104 bytes (20%) of dynamic memory, leaving 16376 bytes for local variables. Maximum is 20480 bytes.
