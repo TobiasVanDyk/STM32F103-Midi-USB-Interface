@@ -3,10 +3,9 @@ This is a replacement for a 4x4 Xpoint Midi diode-based switch constructed in th
 
 The Pico Midi Switch has 4 screens - two with a 5x5 matrix touch switch for normal Midi routing and IThru routing (both also indicating any attached slots), and two screens with 36 buttons on 4 layers, for various functions such as sending Midi control changes or system exclusive messages. Use the [Nxt] or [>] key to move between the four layouts, and the [Up] and [Dwn] to move between the 4 layers A to D. Note that the Pico updates its Midi routing data after switch-on, during the first LCD blank timeout - currently set to 20 seconds - i.e. Midi routing data will only be valid after this first LCD timeout.
 
-Colours: Blue indicates no routing connection between input Jack A-E and output Jack 1-5. Pressing on any of the 25 crosspoints will toggle it on/off, and the colours will change to Red when In-Out is connected. Green indicates that a Slot is attached to an input Jack and the second character on the button is then the slot number 1-8 instead of the column number 1-5. When the [Sl] button is active pressing any of the attached buttons in a row will toggle the slot on/off.
+**XPoint Switch Colours:** Blue indicates no routing connection between input Jack A-E and output Jack 1-5. Pressing on any of the 25 crosspoints will toggle it on/off, and the colour will change to Red when an In-Out set of Jacks are connected. Green indicates that a Slot is attached to an input Jack and the second character on the button is then the slot number 1-8 instead of the output column number 1-5. When the [Sl] button is active pressing any of the attached buttons in a row will toggle the slot on/off.
 
-To change or add slots to an iThru or Midi input Jack, press the [Sl] key - it will change colour. The status bar will show a list of all attached slots. Pressing any existing slot rows will toggle it on/off without changing the slot number. Pressing the [Op] option button will cycle between 1 and 8, and pressing any input Jack row 
-A-E will then assign that slot to that input Jack. 
+To change or add/remove slots to an iThru or Midi input Jack, press the [Sl] key - it will change colour. The status bar will show a list of all attached slots. Pressing any existing slot rows will toggle it on/off without changing the slot number. Pressing the [Op] option button will cycle between 1 and 8, and pressing any input Jack row A-E will then assign the specified slot to the input Jack. 
 
 It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. The only change is the addition of a SysEx F0 77 77 78 E0 04 00 00 F7 to mod_intsysex.h to send routing data to the Pico - the modified file is in the folder PicoKlik21 as mod_intsysex.zip
 
@@ -16,6 +15,7 @@ It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F1
 <img src="images/picC.jpg" height="160" /> 
 </p>
 
+The 3D case files are in the STL folder. It is based on this [**PCB-holder SCAD model**](https://www.thingiverse.com/thing:4061855). Various length and width parameters for other MCU-boards (namely an RP2040 Pico, STM32F103 Blue Pill, STM32F411 Black Pill, and a Teensy 4.1) are in the file pcbholder-params.txt, also in the STL folder.
 
 <p align="left">
 <img src="images/3x3a.png" height="200" /> 
