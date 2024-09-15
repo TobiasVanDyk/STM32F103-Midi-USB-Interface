@@ -1,15 +1,19 @@
 ## STM32F103 Midi USB Interface based on Midiklik
 This is a replacement for a 4x4 Xpoint Midi diode-based switch constructed in the early 1990's, by using a software Midi router and switch based on [**MidiKlik4x4**](https://github.com/TheKikGen/USBMidiKliK4x4/tree/master) - Midiklik is an unusual MidiUSB interface because of the extensive range and number of routing, [filters and pipes](https://github.com/TheKikGen/USBMidiKliK4x4/blob/master/UMK-4X4-SYSEX-IPL.TXT) and other configuration options, changeable via its set of internal SysEx commands. 
 
-The Pico Midi Switch has 4 screens - two with a 5x5 matrix touch switch for normal Midi routing and IThru routing, and two screens with 12 buttons for various functions - all of which are still in development. Use the [Nxt] or [>] key to move between the four layouts. Note that the Pico updates its Midi routing data after switch-on, during the first LCD blank timeout - currently set to 20 seconds - i.e. Midi routing data will only be valid after this first LCD timeout. 
+The Pico Midi Switch has 4 screens - two with a 5x5 matrix touch switch for normal Midi routing and IThru routing (both also indicating any attached slots), and two screens with 36 buttons on 4 layers, for various functions such as sending Midi control changes or system exclusive messages. Use the [Nxt] or [>] key to move between the four layouts, and the [Up] and [Dwn] to move between the 4 layers A to D. Note that the Pico updates its Midi routing data after switch-on, during the first LCD blank timeout - currently set to 20 seconds - i.e. Midi routing data will only be valid after this first LCD timeout.
 
-It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. The only change is the addition of a SysEx F0 77 77 78 E0 04 00 00 F7 to mod_intsysex.h to send routing data to the Pico - the modified file is here as mod_intsysex.zip
+Colours: Blue indicates no routing connection between input Jack A-E and output Jack 1-5. Pressing on any of the 25 crosspoints will toggle it on/off, and the colours will change to Red when In-Out is connected. Green indicates that a Slot is attached to an input Jack and the second character on the button is then the slot number 1-8 instead of the column number 1-5. When the [Sl] button is active pressing any of the attached buttons in a row will toggle the slot on/off.
+
+To change or add slots to an iThru or Midi input Jack, press the [Sl] key - it will change colour. The status bar will show a list of all attached slots. Pressing any existing slot rows will toggle it on/off without changing the slot number. Pressing the [Op] option button will cycle between 1 and 8, and pressing any input Jack row 
+A-E will then assign that slot to that input Jack. 
+
+It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. The only change is the addition of a SysEx F0 77 77 78 E0 04 00 00 F7 to mod_intsysex.h to send routing data to the Pico - the modified file is in the folder PicoKlik21 as mod_intsysex.zip
 
 <p align="left">
-<img src="images/p1.jpg" height="140" /> 
-<img src="images/p2.jpg" height="140" /> 
-<img src="images/p3.jpg" height="140" /> 
-<img src="images/p4.jpg" height="140" /> 
+<img src="images/picA.jpg" height="160" /> 
+<img src="images/picB.jpg" height="160" /> 
+<img src="images/picC.jpg" height="160" /> 
 </p>
 
 
