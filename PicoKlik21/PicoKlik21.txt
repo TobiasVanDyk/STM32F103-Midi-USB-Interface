@@ -1,0 +1,29 @@
+Compiled with Pico SDK 2.0, Arduino Pico 4.0.2 and included Adafruit_TinyUSB_Arduino 3.3, and TFTeSPI 2.5.43
+User_Setup.h needed for ILI9341 LCD resistive touch display is here as User_Setup.zip
+
+To install new version of Arduino Pico first delete it from boards manager, then delete the folder 
+C:\Users\Name\AppData\Local\Arduino15\packages\rp2040 then close and reopen Arduino IDE and then add the new Arduino Pico Board again.
+
+NB: Use 2MB Flash option with 1MB Sketch 1 MB FS 
+    Use USB Stack Adafruit TinyUSB
+    Use 125 MHz CPU when higher SPI read is used.
+----------------------------------------------------------------------------------------------------------------------------------
+Using library Adafruit_TinyUSB_Arduino at version 3.3.3 in folder: C:\Users\Tobias\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.0.2\libraries\Adafruit_TinyUSB_Arduino 
+Using library SPI at version 1.0 in folder: C:\Users\Tobias\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.0.2\libraries\SPI 
+Using library TFT_eSPI at version 2.5.43 in folder: C:\Users\Tobias\Documents\Arduino\libraries\TFT_eSPI 
+Using library LittleFS at version 0.1.0 in folder: C:\Users\Tobias\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.0.2\libraries\LittleFS 
+Using library MIDI_Library at version 5.0.2 in folder: C:\Users\Tobias\Documents\Arduino\libraries\MIDI_Library 
+"C:\\Users\\Tobias\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\2.2.0-d04e724/bin/arm-none-eabi-size" -A "I:\\Data\\Win10LTSC\\Arduino/PicoKlik21.ino.elf"
+Sketch uses 134136 bytes (12%) of program storage space. Maximum is 1044480 bytes.
+Global variables use 14988 bytes (5%) of dynamic memory, leaving 247156 bytes for local variables. Maximum is 262144 bytes.
+C:\Users\Tobias\AppData\Local\Arduino15\packages\rp2040\tools\pqt-python3\1.0.1-base-3a57aed/python3 -I C:\Users\Tobias\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.0.2/tools/uf2conv.py --serial COM10 --family RP2040 --deploy I:\Data\Win10\Arduino/PicoKlik21.ino.uf2 
+Resetting COM10
+Converting to uf2, output size: 302592, start address: 0x2000
+Scanning for RP2040 devices
+Flashing D: (RPI-RP2)
+Wrote 302592 bytes to D:/NEW.UF2
+--------------------------------------------------------------------------------------------------------------------------------
+MidiKlik source code changes:
+Only change is the addition of a SysEx F0 77 77 78 E0 04 00 00 F7 to mod_intsysex.h 
+Modified file is here as mod_intsysex.zip
+--------------------------------------------------------------------------------------------------------------------------------
