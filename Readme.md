@@ -7,7 +7,7 @@ The Pico Midi Switch has 4 screens - two with a 5x5 matrix touch switch for norm
 
 To change or add/remove slots to an iThru or Midi input Jack, press the [Sl] key - it will change colour. The status bar will show a list of all attached slots. Pressing any existing slot rows will toggle it on/off without changing the slot number. Pressing the [Op] option button will cycle between 1 and 8, and pressing any input Jack row A-E will then assign the specified slot to the input Jack. 
 
-It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. The only change is the addition of a SysEx F0 77 77 78 E0 04 00 00 F7 to mod_intsysex.h to send routing data to the Pico - the modified file is in the folder PicoKlik21 as mod_intsysex.zip
+It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. The only change is the addition of a SysEx F0 77 77 78 E0 04 00 00 F7 to mod_intsysex.h to send routing data to the Pico - the modified file is in the folder PicoKlik21 as mod_intsysex.zip. It is therefore possible to build the Pico controller in an external case, and connect it to an existing MidiKlik4x4 through Jack Port 1.
 
 <p align="left">
 <img src="images/picA.jpg" height="160" /> 
@@ -15,7 +15,7 @@ It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F1
 <img src="images/picC.jpg" height="160" /> 
 </p>
 
-The 3D case files are in the STL folder. It is based on this [**PCB-holder SCAD model**](https://www.thingiverse.com/thing:4061855). Various length and width parameters for other MCU-boards (namely an RP2040 Pico, STM32F103 Blue Pill, STM32F411 Black Pill, and a Teensy 4.1) are in the file pcbholder-params.txt, also in the STL folder.
+The 3D case files are in the STL folder. The two Pico and BluePill MCU holders are based on this [**PCB-holder SCAD model**](https://www.thingiverse.com/thing:4061855). Various length and width parameters for other MCU-boards (namely an RP2040 Pico, STM32F103 Blue Pill, STM32F411 Black Pill, and a Teensy 4.1) are in the file pcbholder-params.txt, also in the STL folder.
 
 <p align="left">
 <img src="images/3x3a.png" height="200" /> 
