@@ -1,0 +1,26 @@
+PicoKlik27
+
+Compiled with Pico SDK 2.0, Arduino Pico 4.0.2 and included Adafruit_TinyUSB_Arduino 3.3, and TFTeSPI 2.5.43
+User_Setup.h needed for ILI9341 LCD resistive touch display is here as User_Setup.zip
+
+To install new version of Arduino Pico first delete it from boards manager, then delete the folder 
+C:\Users\Name\AppData\Local\Arduino15\packages\rp2040 then close and reopen Arduino IDE and then add the new Arduino Pico Board again.
+
+NB: Use 2MB Flash option with 1MB Sketch 1 MB FS 
+    Use USB Stack Adafruit TinyUSB
+    Use 125 MHz CPU when higher SPI read is used.
+----------------------------------------------------------------------------------------------------------------------------------
+Using library Adafruit_TinyUSB_Arduino at version 3.3.3 in folder: C:\Users\Tobias\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.0.2\libraries\Adafruit_TinyUSB_Arduino 
+Using library SPI at version 1.0 in folder: C:\Users\Tobias\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.0.2\libraries\SPI 
+Using library TFT_eSPI at version 2.5.43 in folder: C:\Users\Tobias\Documents\Arduino\libraries\TFT_eSPI 
+Using library LittleFS at version 0.1.0 in folder: C:\Users\Tobias\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.0.2\libraries\LittleFS 
+Using library MIDI_Library at version 5.0.2 in folder: C:\Users\Tobias\Documents\Arduino\libraries\MIDI_Library 
+"C:\\Users\\Tobias\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\2.2.0-d04e724/bin/arm-none-eabi-size" -A "I:\\Data\\Win10LTSC\\Arduino/PicoKlik27.ino.elf"
+Sketch uses 135488 bytes (12%) of program storage space. Maximum is 1044480 bytes.
+Global variables use 15136 bytes (5%) of dynamic memory, leaving 247008 bytes for local variables. Maximum is 262144 bytes.
+--------------------------------------------------------------------------------------------------------------------------------
+MidiKlik source code changes:
+(1) Addition of a SysEx F0 77 77 78 E0 04 00 00 F7 and F0 77 77 78 E0 05 00 00 F7 to mod_intsysex.h
+(2) Change all default routing to off (0) in  UsbMidiKliK4x4.ino
+Modified file is here as ChangedFiles-USBMidiKliK4x4.zip
+--------------------------------------------------------------------------------------------------------------------------------
