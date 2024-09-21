@@ -13,9 +13,7 @@ are explained in the source code PicoKlik27.ino.
 
 To change or add/remove slots to an iThru or Midi input Jack, press the [Sl] key - it will change colour. The status bar will show a list of all attached slots. Pressing any existing slot rows will toggle it on/off without changing the slot number. Pressing the [Op] option button will cycle between 1 and 8, and pressing any input Jack row A-E will then assign the specified slot to the input Jack. Once the iThru mode is active it requires pressing key [S03] - reboot MidiKlik4x4 - to re-enable the Midi routing matrix switches. Similarly if an iThru switch is enabled but the row is disabled (switch turns from red to purple) - a [S03] reboot is also required. The Pico does not have to be rebooted with key [T09] in these cases.
 
-It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. The only change is the addition of a SysEx F0 77 77 78 E0 04 00 00 F7 to mod_intsysex.h to send routing data to the Pico - the modified file is in the folder PicoKlik21 as mod_intsysex.zip. 
-
-It is therefore possible to use just the Pico controller in an external case, and connect it to an existing (re-programmed), multi-MidiKlik4x4 through its Jack Port 1.
+It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. It is therefore possible to use just the Pico controller in an external case, and connect it to an existing (re-programmed), multi-MidiKlik4x4 through its Jack Port 1.
 
 <p align="left">
 <img src="images/picA.jpg" height="160" /> 
