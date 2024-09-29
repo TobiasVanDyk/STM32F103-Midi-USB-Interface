@@ -2,23 +2,24 @@
 This is a replacement for a 4x4 Xpoint Midi diode-based switch constructed in the early 1990's, by using a software Midi router and switch based on [**MidiKlik4x4**](https://github.com/TheKikGen/USBMidiKliK4x4/tree/master) - Midiklik is an unusual MidiUSB interface because of the extensive range and number of [**routing, filters and pipes**](https://github.com/TheKikGen/USBMidiKliK4x4/blob/master/UMK-4X4-SYSEX-IPL.TXT) and other configuration options, changeable via its set of internal SysEx commands.
 
 **MidiKlik source code changes:**
-(1) Addition of a SysEx F0 77 77 78 E0 04 00 00 F7 and F0 77 77 78 E0 05 00 00 F7 to mod_intsysex.h
+(1) Addition of four SysEx F0 77 77 78 E0 04,05,06,07 to mod_intsysex.h
 (2) Change all default routing to off (0) in  UsbMidiKliK4x4.ino
 The modified files are inside the folder PicoKlik27 as ChangedFiles-USBMidiKliK4x4.zip
 
 The Pico Midi Switch has 4 screens - two with a 5x5 matrix touch switch where rows are Input Jacks A-E, columns are Output Jacks 1-5 - for normal IThru routing and Midi routing (both also indicating attached slots). The other two screens, each with 36 buttons on 4 layers A-D, are for Midi, configuration, and control functions such as rebooting the RP2040Pico or the STM32F103, or sending Midi control changes and system exclusive messages. Use the [Nxt] or [>] key to move between the four layouts, and the [Up] and [Dwn] to move between the 4 layers A to D. Note that the Pico updates its Midi routing data after switch-on, before the first LCD blank timeout - currently set to 25 seconds - the status bar will show "Sync completed" when  Midi routing data are valid. 
 
-**XPoint Switch Colours:** Blue indicates no routing connection between input Jack A-E and output Jack 1-5. Pressing on any of the 25 crosspoints will toggle it on/off, and the colour will change to Red when an Input-Output Jack-pair is connected. Green indicates that a Slot is attached to an input Jack and the second character on the switch button is then the slot number 1-8 instead of the output number 1-5. When the [Sl] button is active pressing any of the attached buttons in a row will toggle the slot on/off. The [Pp] and [Rt] button functions
-are explained in the comments of the source code file [**PicoKlik27.ino**](https://github.com/TobiasVanDyk/STM32F103-Midi-USB-Interface/blob/main/PicoKlik27/PicoKlik27.ino).
+**XPoint Switch Colours:** Black indicates no routing connection between input Jack A-E and output Jack 1-5. Pressing on any of the 25 crosspoints will toggle it on/off, and the colour will change to Red when an Input-Output Jack-pair is connected. Green indicates that a Slot is attached to an input Jack and the second character on the switch button is then the slot number 1-8 instead of the output number 1-5. When the [Sl] button is active pressing any of the attached buttons in a row will toggle the slot on/off. The [Pp] and [Rt] button functions
+are explained in the comments of the source code file [**PicoKlik29.ino**](https://github.com/TobiasVanDyk/STM32F103-Midi-USB-Interface/blob/main/PicoKlik29/PicoKlik29.ino).
 
 To change or add/remove slots to an iThru or Midi input Jack, press the [Sl] key - it will change colour. The status bar will show a list of all attached slots. Pressing any existing slot rows will toggle it on/off without changing the slot number. Pressing the [Op] option button will cycle between 1 and 8, and pressing any input Jack row A-E will then assign the specified slot to the input Jack. Once the iThru mode is active it requires pressing key [S03] - reboot MidiKlik4x4 - to re-enable the Midi routing matrix switches. Similarly if an iThru switch is enabled but the row is disabled (switch turns from red to purple) - a [S03] reboot is also required. The Pico does not have to be rebooted with key [T09] in these cases.
 
 It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F103 boards. The Pico controls the Midi switches via UART Port 1. It is therefore possible to use just the Pico controller in an external case, and connect it to an existing (re-programmed), multi-MidiKlik4x4 through its Jack Port 1.
 
 <p align="left">
-<img src="images/picA.jpg" height="160" /> 
-<img src="images/picB.jpg" height="160" /> 
-<img src="images/picC.jpg" height="160" /> 
+<img src="images/layout1.jpg" height="120" /> 
+<img src="images/layout2.jpg" height="120" />  
+<img src="images/picB.jpg" height="120" /> 
+<img src="images/picC.jpg" height="120" /> 
 </p>
 
 The 3D case files are in the STL folder. The two Pico and BluePill MCU holders are based on this [**PCB-holder SCAD model**](https://www.thingiverse.com/thing:4061855). Various length and width parameters for other MCU-boards (namely an RP2040 Pico, STM32F103 Blue Pill, STM32F411 Black Pill, and a Teensy 4.1) are in the file pcbholder-params.txt, also in the STL folder.
