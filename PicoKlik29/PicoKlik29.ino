@@ -383,7 +383,7 @@ void DoPipeSlot(int r, int pipeIdx, byte p, byte pipeSet) // pipeSet = Choose fr
 // How to use:
 // Use Column number 1-5 for Pipe Index = position in the slot 0-4 
 // -> if no pipes in slot must press the first column on the selected slot
-// First switch-on [Sl] then [Pp] (both green) then keep pressing [Op] until PipeSet number 1-7 shows
+// First switch-on [Sl] then [Pp] (both green) then keep pressing [Op] until PipeSet number 1-8 shows
 // Then when selected number shows press on the visible slot 1-5 to choose te PipeIndex or slot position
 // PipeSet: Byte 0 = PipeID Bytes 1-3 Pipe Parameters 1-4
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -592,7 +592,7 @@ void buttonpress(int xpoint)
     case 29: //////////////////////////////////////////////// Option4 
       if (Slot && Pipes) { SlotPipes = true; status("Press [Op] select preset Pipe 1-20"); SlotPipesNum++; if (SlotPipesNum>9) SlotPipesNum = 0; 
           PipeSetStr[8] = SlotPipesNum + 48; status((char *)PipeSetStr); delay(keydelay); break; }
-      if (PipeOption) { PipeNum++; if (PipeNum>7) PipeNum=1; PipeNumStr[5] = PipeNum+48; status((char *)PipeNumStr); delay(keydelay); break; } 
+      if (PipeOption) { PipeNum++; if (PipeNum>8) PipeNum=1; PipeNumStr[5] = PipeNum+48; status((char *)PipeNumStr); delay(keydelay); break; } 
       if (Pipes) { status("Press [Op] PipeIdx 1-8 Bypass"); PipeNum = 1; PipeOption = true; delay(keydelay); break; }    
       if (SlotOption) { SlotNum++; if (SlotNum>8) SlotNum=1; SlotNumStr[5] = SlotNum+48; status((char *)SlotNumStr); delay(keydelay); break; } 
       if (Slot) { status("Press [Op] for Slot 1-8"); SlotNum = 0; SlotOption = true; delay(keydelay); break; }
