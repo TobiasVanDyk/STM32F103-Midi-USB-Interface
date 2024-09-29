@@ -4,7 +4,7 @@ This is a replacement for a 4x4 Xpoint Midi diode-based switch constructed in th
 **MidiKlik source code changes:**
 (1) Addition of four SysEx F0 77 77 78 E0 04,05,06,07 to mod_intsysex.h
 (2) Change all default routing to off (0) in  UsbMidiKliK4x4.ino
-The modified files are inside the folder PicoKlik27 as ChangedFiles-USBMidiKliK4x4.zip
+The two modified files are inside the folder PicoKlik29 as USBMidiKliK4x4.zip.
 
 The Pico Midi Switch has 4 screens - two with a 5x5 matrix touch switch where rows are Input Jacks A-E, columns are Output Jacks 1-5 - for normal IThru routing and Midi routing (both also indicating attached slots). The other two screens, each with 36 buttons on 4 layers A-D, are for Midi, configuration, and control functions such as rebooting the RP2040Pico or the STM32F103, or sending Midi control changes and system exclusive messages. Use the [Nxt] or [>] key to move between the four layouts, and the [Up] and [Dwn] to move between the 4 layers A to D. Note that the Pico updates its Midi routing data after switch-on, before the first LCD blank timeout - currently set to 25 seconds - the status bar will show "Sync completed" when  Midi routing data are valid. 
 
