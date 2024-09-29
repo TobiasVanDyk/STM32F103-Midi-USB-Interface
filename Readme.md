@@ -36,6 +36,13 @@ The LCD is an Electrodragon LCD ILI9341 320x240 2.4inch with XPT2046 touch contr
 <img src="images/TFT-ILI9341.jpg" height="140" /> 
 </p>
 
+6N137 Midi Input and direct Midi Output
+
+<p align="left">
+<img src="images/3x3c.png" height="240" /> 
+<img src="images/3x3d.png" height="240" />  
+</p>
+
 This is a detailed description of how to compile and program an STM32F103C8T6 MidiUSBConverter with the code from [**TheKikGen USBMidiKliK4x4**](https://github.com/TheKikGen/USBMidiKliK4x4) without having to touch the Boot jumpers on the STM32F103 board.
 
 01 Install the STM32CubeProgrammer from [**here**](https://www.st.com/en/development-tools/stm32cubeprog.html)  - you will have to supply an email to do so. You may want to inspect your sound devices and com ports present before the next steps. If necessary install [**MidiOX**](http://www.midiox.com/) for more detailed information about your sound midi and synth devices.
@@ -98,7 +105,7 @@ Also in the Tool menu select:<br>
 <img src="images/image10.png" height="240" /> 
 </p>
 
-### Prototype
+
 
 6N137 Midi Input and direct Midi Output
 
