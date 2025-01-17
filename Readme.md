@@ -5,7 +5,7 @@ This is a replacement for a 4x4 Xpoint Midi diode-based switch constructed in th
 ```
 (1) Addition of a four SysEx F0 77 77 78 E0 04,05,06,07 00 00 F7 to mod_intsysex.h
 (2) Change all default routing to off (0) in  UsbMidiKliK4x4.ino except shift the cables one jackout position
-(3) Update for the MidiKlik4x4 2024 changes to correct no USB Midi cable detect in freeze in the new UsbMidiKliK4x4.ino included here.
+(3) Update for the MidiKlik4x4 2024 changes to correct no USB Midi cable detect freeze
 (4) //#pragma message(__VAR_NAME_VALUE(HARDWARE_TYPE)) in hardware_config.h 
 (5) #define DEFAULT_ITHRU_USB_IDLE_TIME_PERIOD 1 in usbmidiklik4x4.h  
 (6) #define USB_MIDI_PRODUCT_STRING "MidiKlik 5x" in usb_midi_device.h
