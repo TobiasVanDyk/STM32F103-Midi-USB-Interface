@@ -22,7 +22,7 @@ It uses a Raspberry Pi Pico RP2040, and a 2.4" ILI9341 touchLCD, and two STM32F1
 
 <p align="left">
 <img src="images/picoklik1a.jpg" height="180" /> 
-<img src="images/picoklik1a.jpg" height="180" /> 
+<img src="images/picoklik1b.jpg" height="180" /> 
 </p>
 
 <p align="left">
