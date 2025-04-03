@@ -21,9 +21,9 @@ holeDistanceFromWall = 5;
 
 
 // <params> for STM32F103 Blue Pill
-pcbThickness = 1.55;
-pcbWidth = 22.7;
-pcbLength = 52.8;
+pcbThickness = 1.60;
+pcbWidth = 23.0;
+pcbLength = 53.0;
 pcbOffsetFromBase = 2.6;
 tolerance = 0.05;
 wall = 1.5;
